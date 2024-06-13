@@ -89,8 +89,9 @@ def get_skeletons_timestamp(features_f, skeletons, features_timestamp):
 
         trajectories_data = features_f.get("trajectories_data")
         dt = [("skeleton_id", int)]
-        with trajectories_data.astype(dt):
-            skeletons_id = trajectories_data["skeleton_id"][:]
+        skeletons_id = trajectories_data["skeleton_id"][:]
+      #  with trajectories_data.astype(dt):
+      #      skeletons_id = trajectories_data["skeleton_id"][:]
 
         skeletons_timestamp = np.zeros(len(skeletons), dtype=int)
         for i in range(len(skeletons)):
